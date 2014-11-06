@@ -4,14 +4,23 @@ This project contains 2 files oneDJury.R and util.R. It only contains the functi
 * 
 
 1. For Chap2(evaluating discretizing gene expression data), the following pipline is suggested:
+
 	1.0 load the util.R into the environment:
+
 			source("util.R");
+			
 	1.1 download the data from genomic portals(http://eh3.uc.edu/GenomicsPortals/), also need to know the types of samples, which should exactly match the colnames of the samples before the first "." .Read data into the environment: 
+	
 			sData = read.csv(sourceFilePass, sep = "\t", header=TRUE)
+			
 	1.2 process the header infomation: 
+	
 			hInfo = colnames(sData)
+			
 			hInfo = unlist(lapply(hInfo, processHeader, sampleTypes));
+			
 			colnames(sData) = hInfo
+			
 		select the data of interest:
 			rownames(sData) = sData[,1]
 			sData = sData[, hInfo > 0]
