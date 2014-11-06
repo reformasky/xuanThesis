@@ -1,5 +1,7 @@
 This project contains 2 files oneDJury.R and util.R. It only contains the functions and does not contain the procedures for the real clustering analysis and the ploting. These two scripts were used for Xuan's master thesis, Chap 2 and Chap 3.
+
 * __SomeDiscription denotes used show provide proper data
+* 
 
 1. For Chap2(evaluating discretizing gene expression data), the following pipline is suggested:
 	1.0 load the util.R into the environment:
@@ -32,6 +34,7 @@ This project contains 2 files oneDJury.R and util.R. It only contains the functi
 			trueLabeling = hInfo[hInfo > 0]
 			result = RRand(groups, trueLabeling)$adjRand
 	1.7 plot the data as needed.
+
 2. For Chap3(oneDJury dimension reduction):
 	2.0 loaddata into environment:
 			source("oneDJury.R");
