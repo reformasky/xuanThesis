@@ -3,6 +3,8 @@ This project contains 2 files oneDJury.R and util.R. It only contains the functi
 * __SomeDiscription denotes used show provide proper data
 * 
 
+** data.csv file contains the TCGA_4_Cancers data set used in the third Chapter, with the the first column coresponds to the gene ID and the first row coresponds to the sample types, with c(1,2,3,4) represents c("kich_tcga", "kirc_tcga_pub","ov_tcga","prad_tcga"). One should read the data this way: sourceData = read.csv(data.csv, header = T, sep = ",") or simply load the data as load("./combinedMatrix") and there will be an object call combinedMatrix in the environment. 
+
 1. For Chap2(evaluating discretizing gene expression data), the following pipline is suggested:
 
 	1.0 load the util.R into the environment:
